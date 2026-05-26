@@ -76,7 +76,7 @@
 </script>
 <script>
 $(document).ready(function() {
-    App.load(function(data) {
+    App.init("About.html", function(data) {
         App.renderNav(data.pages);
         var idx = App.getPageIndex(data.pages, "About.html");
         var page = data.pages[idx];
@@ -86,7 +86,7 @@ $(document).ready(function() {
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ["\\\(", "\\\)"]], processEscapes: true}});
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ["\\(", "\\)"]], processEscapes: true}});
 </script>
 </body>
 </html>
