@@ -7,8 +7,8 @@
     <meta name="Description" content="blog"/>
     <title>Simple</title>
     <link rel="shortcut icon" href="/static/favicon.png"/>
-    <link rel="stylesheet" type="text/css" href="main.css" />
-<script src="http://c.cnzz.com/core.php"></script></head>
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+</head>
 <body>
 <div class="main">
     <div class="header">
@@ -32,10 +32,12 @@
     <div class="innermain" id="main">
     </div>
     <div class="footer">
-        <p>© Copyright 2014 by isnowfy, Designed by isnowfy</p>
+        <p>&copy; Copyright 2026 by RobinIsABoy</p>
     </div>
 </div>
-<script src="main.js"></script>
+<script src="assets/js/vendor/jquery.min.js"></script>
+<script src="assets/js/vendor/hogan.min.js"></script>
+<script src="assets/js/vendor/spine.min.js"></script>
 <script id="itemTemplate" type="text/mustache">
     {{#posts}}
     <div class="item">
@@ -107,7 +109,6 @@ $(document).ready(function() {
                     return 1;
                 return 0;
             });
-            console.log(data.posts);
             var per = data.number_of_posts_per_page;
             var n = data.posts.length;
             var num = Math.floor((n-1)/per)+1;
@@ -225,7 +226,7 @@ $(document).ready(function() {
         error: function(e) {
             console.log("init error");
         }
-    });    
+    });
 });
 </script>
 </body>
